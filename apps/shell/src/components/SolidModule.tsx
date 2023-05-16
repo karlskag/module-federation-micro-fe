@@ -1,4 +1,4 @@
-import { mount } from 'react_module/ReactModule'
+import { mount } from 'solidjs_module/SolidModule'
 import React, { useRef, useEffect } from 'react'
 
 export default () => {

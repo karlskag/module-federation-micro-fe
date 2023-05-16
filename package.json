@@ -2,7 +2,9 @@
   "name": "module-federation-micro-fe",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start-all": "nx run-many --parallel --target=start"
+  },
   "private": true,
   "dependencies": {},
   "devDependencies": {

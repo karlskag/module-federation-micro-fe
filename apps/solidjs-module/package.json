@@ -1,0 +1,25 @@
+{
+  "name": "solid-module",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "webpack serve"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
+    "@babel/preset-typescript": "^7.21.5",
+    "babel-loader": "^8.1.0",
+    "babel-preset-solid": "^1.7.4",
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^4.5.0",
+    "svg-inline-loader": "^0.8.2",
+    "typescript": "^5.0.4",
+    "webpack-cli": "^5.1.1"
+  },
+  "dependencies": {
+    "solid-js": "^1.6.10"
+  }
+}

@@ -1,0 +1,15 @@
+.container {
+  display: inline-block;
+  background-color: beige;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px dotted black;
+}
+
+.remotesContainer {
+  display: flex;
+  margin-top: 80px;
+  width: 600px;
+  justify-content: space-around;
+}

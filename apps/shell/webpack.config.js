@@ -28,7 +28,14 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ["style-loader"],
+      },
+      {
+        test: /\.css$/i,
+        loader: 'css-loader',
+        options: {
+          modules: true,
+        }
       },
     ],
   },
@@ -36,7 +43,8 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'host_app',
       remotes: {
-        react_module: 'react_module@http://localhost:3010/remoteEntry.js'
+        react_module: 'react_module@http://localhost:3010/remoteEntry.js',
+        solidjs_module: 'solidjs_module@http://localhost:3011/remoteEntry.js'
       },
       shared: { react: { singleton: true }, 'react-dom': { singleton: true } },
     }),

@@ -5,10 +5,10 @@ module.exports = {
   entry: './src/index',
   mode: 'development',
   output: {
-    publicPath: 'http://localhost:3010/',
+    publicPath: 'http://localhost:3011/',
   },
   devServer: {
-    port: 3010,
+    port: 3011,
   },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
@@ -21,7 +21,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-react', '@babel/preset-env', '@babel/preset-typescript'],
+            presets: ['@babel/preset-react', '@babel/preset-env', '@babel/preset-typescript', 'solid'],
             plugins: ['@babel/plugin-transform-runtime'],
           }
         }
@@ -32,24 +32,27 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        loader: 'css-loader',
+        loader: "css-loader",
         options: {
           modules: {
             auto: true,
-            localIdentName: 'reactjs--[hash:base64:5]',
+            localIdentName: 'solidjs--[hash:base64:5]',
           },
         }
       },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
+      }
     ],
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'react_module',
+      name: 'solidjs_module',
       filename: 'remoteEntry.js',
       exposes: {
-        './ReactModule': './src/bootstrap.tsx'
+        './SolidModule': './src/bootstrap.tsx'
       },
-      shared: { react: { singleton: true }, 'react-dom': { singleton: true } },
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html'

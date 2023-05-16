@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from './App.module.css'
 
 function App() {
   return (
-    <div style={{ background: 'lightblue' }}>
+    <div className={styles.container}>
       <header>
         This is a self contained React module!
       </header>
