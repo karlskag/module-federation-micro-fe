@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './App.module.css'
 import ReactModule from "./components/ReactModule";
 import SolidModule from "./components/SolidModule";
+import VueModule from "./components/VueModule";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
       <div className={styles.remotesContainer}>
         <ReactModule />
         <SolidModule />
+        <div className={styles.lgModule}>
+          <VueModule />
+        </div>
       </div>
     </div>
   );

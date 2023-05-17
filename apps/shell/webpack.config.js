@@ -9,6 +9,11 @@ module.exports = {
   },
   devServer: {
     port: 3005,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+      'Access-Control-Allow-Headers': 'X-Requested-With, content-type, Authorization',
+    },
   },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
@@ -44,7 +49,8 @@ module.exports = {
       name: 'host_app',
       remotes: {
         react_module: 'react_module@http://localhost:3010/remoteEntry.js',
-        solidjs_module: 'solidjs_module@http://localhost:3011/remoteEntry.js'
+        solidjs_module: 'solidjs_module@http://localhost:3011/remoteEntry.js',
+        vue_module: `promise import("http://localhost:3012/assets/remoteEntry.js")`,
       },
       shared: { react: { singleton: true }, 'react-dom': { singleton: true } },
     }),

@@ -9,6 +9,11 @@ module.exports = {
   },
   devServer: {
     port: 3010,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+      "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
+    }
   },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
@@ -48,6 +53,9 @@ module.exports = {
       filename: 'remoteEntry.js',
       exposes: {
         './ReactModule': './src/bootstrap.tsx'
+      },
+      remotes: {
+        solidjs_module: 'solidjs_module@http://localhost:3011/remoteEntry.js',
       },
       shared: { react: { singleton: true }, 'react-dom': { singleton: true } },
     }),

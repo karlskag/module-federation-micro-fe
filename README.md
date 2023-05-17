@@ -5,6 +5,15 @@ Experimenting with creating framework agnostic microfrontends using Webpack5 mod
 
 https://webpack.js.org/concepts/module-federation/
 
+Below is a screenshot of all frontends running.
+The wrapping beige square is the shell-application exclusively hosting remotes.
+But as displayed in the picture a remote can also consume other remote containers.
+The green square (a SolidJS app) is being consumed by two separate hosts.
+
+Modules are hotswapped when any change is made to the application code.
+
+![img.png](img.png)
+
 ## Scripts
 
 To start all applications from the root run `npm run start-all`.

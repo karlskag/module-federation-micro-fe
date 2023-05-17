@@ -14,7 +14,7 @@ const mount = (el: HTMLElement) => {
 }
 
 if (process.env.NODE_ENV === 'development') {
-  const devRoot = document.getElementById('root')
+  const devRoot = document.getElementById('react-root')
   if (devRoot) {
     mount(devRoot)
   }
