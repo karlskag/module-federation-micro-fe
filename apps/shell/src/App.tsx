@@ -10,7 +10,7 @@ function App() {
       <header>
         This is the application SHELL ~
       </header>
-      It's job is to consume micro-frontends served with Webpack module federation
+      Its job is to consume micro-frontends served using Webpack module federation
       <br />
       <a href="https://webpack.js.org/concepts/module-federation/">Read more in the webpack docs</a>
       <div className={styles.remotesContainer}>
