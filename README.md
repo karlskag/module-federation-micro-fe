@@ -1,9 +1,10 @@
-# Micro frontends with webpack module federation
+# Micro frontends with module federation
 
+Experimenting with creating framework agnostic microfrontends using Webpack5 & Vite module federation.
 Using Nx for application/package coordination.
-Experimenting with creating framework agnostic microfrontends using Webpack5 module federation.
 
 https://webpack.js.org/concepts/module-federation/
+https://github.com/originjs/vite-plugin-federation
 
 Below is a screenshot of all frontends running.
 The wrapping beige square is the shell-application exclusively hosting remotes.
